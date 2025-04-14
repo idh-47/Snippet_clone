@@ -2,10 +2,9 @@ import "../styles/header.scss";
 import logo from "../assets/snippet_logo_white.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
-export default function header() {
+export default function Header() {
   return (
     <div id="head">
       <Logo />
