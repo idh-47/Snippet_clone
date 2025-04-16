@@ -13,14 +13,17 @@ $snippetBlueL: #1292ee;
 
 #head {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100vw;
-  height: 11.5vh;
+  height: 13vh;
   border-bottom: 1px solid white;
 }
+
 #logo {
-  width: 8vw;
+  width: 8.5vw;
   height: 10vh;
-  margin-top: 5px;
+  object-fit: contain;
 }
 #logoW {
   flex-grow: 4;
@@ -38,7 +41,7 @@ ul {
     color: white;
     list-style: none;
     font-family: "snippet";
-    font-family: 1em;
+    font-size: 1em;
     margin-right: 20px;
     &:hover {
       color: $snippetBlueL;
@@ -57,7 +60,6 @@ ul {
   font-size: 35px;
   color: white;
 }
-
 @media screen and (max-width: 1199px) {
   #logo {
     width: 15vw;

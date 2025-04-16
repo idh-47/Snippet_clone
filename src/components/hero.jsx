@@ -3,9 +3,11 @@ import "../styles/hero.scss";
 export default function Hero() {
   return (
     <div id="heroW">
-      <div id="hero">
-        <Title />
-        <Text />
+      <div className="container">
+        <div id="hero">
+          <Title />
+          <Text />
+        </div>
         <div id="btnsW">
           <Btn text="Get started" id="btn1" />
           <Btn text="Learn More" id="btn2" />
