@@ -1,0 +1,99 @@
+$snippetGrey: #9491a9;
+$snippetBlack: #030f27;
+$snippetLightBlue: #1292ee;
+#section2 {
+  background-color: #f8faff;
+}
+.card {
+  font-family: "snippet";
+  width: 400px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  &:hover {
+    animation: 0.2s cardAni ease-in-out 0s 1 forwards;
+  }
+}
+
+#cardW {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.iconsCard {
+  font-size: 50px;
+  color: $snippetLightBlue;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.tito {
+  font-size: 20px;
+  color: $snippetBlack;
+  margin-bottom: 15px;
+}
+
+.links {
+  text-decoration: none;
+  color: $snippetLightBlue;
+  margin-top: 45px;
+}
+.cardTxt {
+  color: $snippetGrey;
+  width: 300px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 425px) {
+  #section2 {
+    margin-top: 210px;
+  }
+  .card {
+    width: 350px;
+    margin-bottom: 10px;
+    height: 350px;
+  }
+  #cardW {
+    padding-right: 5px;
+  }
+  .links {
+    margin-top: 20px;
+  }
+}
+
+@media (min-height: 1300px) {
+  .card {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .card {
+    width: 340px !important;
+  }
+  #section2 {
+    margin-top: 300px !important;
+  }
+}
+
+@keyframes cardAni {
+  0% {
+    scale: 1;
+    position: relative;
+    bottom: 0px;
+  }
+
+  100% {
+    scale: 1;
+    box-shadow: 3px 3px 10px 10px rgb(240, 240, 240);
+    border: none;
+    position: relative;
+    bottom: 5px;
+  }
+}

@@ -1,4 +1,5 @@
 import "../styles/hero.scss";
+// import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -9,8 +10,8 @@ export default function Hero() {
           <Text />
         </div>
         <div id="btnsW">
-          <Btn text="Get started" id="btn1" />
-          <Btn text="Learn More" id="btn2" />
+          <Btn text="Get started" id="btn1" link="https://snippet.ma/contact" />
+          <Btn text="Learn More" id="btn2" link="https://snippet.ma/services" />
         </div>
       </div>
     </div>
@@ -39,8 +40,10 @@ function Text() {
 
 function Btn(props) {
   return (
-    <button className="btns" id={props.id}>
-      {props.text}
-    </button>
+    <a href={props.link}>
+      <button className="btns" id={props.id}>
+        {props.text}
+      </button>
+    </a>
   );
 }

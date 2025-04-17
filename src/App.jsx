@@ -2,6 +2,7 @@ import "./styles/app.scss";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Section1 from "./components/section1";
+import Section2 from "./components/section2";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Hero />
       </div>
       <Section1 />
+      <Section2 />
     </>
   );
 }

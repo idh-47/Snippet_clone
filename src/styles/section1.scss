@@ -23,7 +23,7 @@ $snippetLightBlue: #1292ee;
   font-family: "snippet";
   font-size: 18px;
   margin-top: 10px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 #div2W {
@@ -39,6 +39,7 @@ $snippetLightBlue: #1292ee;
 .Img {
   width: 360px;
   border-radius: 6px;
+  box-shadow: -3px 5px 5px #dfdfdf;
 }
 #titleMini {
   color: $snippetGrey;
@@ -80,7 +81,7 @@ $snippetLightBlue: #1292ee;
     text-align: center;
   }
   .title {
-    font-size: 36px;
+    font-size: 35px;
   }
   .text {
     font-size: 16px;
@@ -125,6 +126,6 @@ $snippetLightBlue: #1292ee;
     flex-wrap: wrap;
   }
   #text2 {
-    margin-top: 120px;
+    margin-top: 160px;
   }
 }

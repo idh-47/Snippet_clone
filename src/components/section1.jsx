@@ -33,14 +33,16 @@ export default function Section1() {
             font={16}
             id="p2"
           />
-          <button id="btn3">About Us</button>
+          <a href="https://snippet.ma/about-us">
+            <button id="btn3">About Us</button>
+          </a>
         </div>
       </div>
     </section>
   );
 }
 
-function Title(props) {
+export function Title(props) {
   return (
     <div>
       <h1
@@ -54,7 +56,7 @@ function Title(props) {
   );
 }
 
-function Text(props) {
+export function Text(props) {
   return (
     <div style={{ width: props.width, textAlign: props.TA }}>
       <p className="text" style={{ fontSize: props.font }} id={props.id}>
