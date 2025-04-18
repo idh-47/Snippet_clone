@@ -76,6 +76,7 @@ function Image(props) {
         position: "relative",
         left: props.offsetx,
         bottom: props.offsety,
+        height: props.height,
       }}
     />
   );
@@ -84,3 +85,5 @@ function Image(props) {
 function TitleMini(props) {
   return <p id="titleMini">{props.text}</p>;
 }
+
+export { Image, TitleMini };

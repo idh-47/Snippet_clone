@@ -1,0 +1,38 @@
+$snippetGrey: #9491a9;
+$snippetBlack: #030f27;
+$snippetLightBlue: #1292ee;
+#section3 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.imgs {
+  width: 725px;
+  margin-top: 180px;
+}
+
+#leftPart {
+  margin-top: 100px;
+}
+#sliders {
+  margin-top: 25px;
+}
+
+@media (max-width: 450px) {
+  .imgs {
+    width: 100px;
+  }
+  #leftPart {
+    position: relative;
+    bottom: 270px;
+  }
+  #text3 {
+    width: 90vw;
+  }
+  #title3 {
+    font-size: 26px !important;
+    width: 350px !important;
+  }
+}
