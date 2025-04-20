@@ -2,6 +2,7 @@ import "../styles/section3.scss";
 import "../styles/skillbars.scss";
 import skill1 from "../assets/skill-1.webp";
 import skill2 from "../assets/skill-2.webp";
+import { motion } from "framer-motion";
 import { Image } from "./section1";
 import { Title } from "./section1.jsx";
 import { TitleMini } from "./section1";
@@ -9,26 +10,40 @@ import { TitleMini } from "./section1";
 export default function Section3() {
   return (
     <div id="section3">
-      <div className="imgs">
-        <Image url={skill2} alt="skill2" />
-        <Image url={skill1} alt="skill1" offsetx={-105} offsety={200} />
-      </div>
-      <div id="leftPart">
-        <div id="text3">
-          <TitleMini text="Your success is our motivation" id="titleM" />
-          <Title
-            text="We are passionate about using technology to solve problems and create value"
-            width={620}
-            sFS={36}
-            id="title3"
-          />
-          <div id="sliders">
-            {skills.map((skill, index) => (
-              <SkillBar key={index} {...skill} />
-            ))}
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="imgs">
+          <Image url={skill2} alt="skill2" />
+          <Image url={skill1} alt="skill1" offsetx={-105} offsety={200} />
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.1, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        <div id="leftPart">
+          <div id="text3">
+            <TitleMini text="Your success is our motivation" id="titleM" />
+            <Title
+              text="We are passionate about using technology to solve problems and create value"
+              width={620}
+              sFS={36}
+              id="title3"
+            />
+            <div id="sliders">
+              {skills.map((skill, index) => (
+                <SkillBar key={index} {...skill} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

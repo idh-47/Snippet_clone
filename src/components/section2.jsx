@@ -2,6 +2,7 @@ import "../styles/section2.scss";
 import "../styles/section1.scss";
 import { Title } from "./section1.jsx";
 import { Text } from "./section1.jsx";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircle,
@@ -11,28 +12,35 @@ import {
 
 export default function section2() {
   return (
-    <section id="section2">
-      <div id="textW">
-        <Title text="We can help you bring your idea to life" />
-        <Text
-          text="From idea to viable product, we can help you define your goals and create a roadmap to the best user experience solution"
-          width={500}
-          TA="center"
-        />
-      </div>
-      <div id="cardW">
-        {Cards.map((card) => {
-          return (
-            <Card
-              icon={card.icon}
-              title={card.title}
-              text={card.text}
-              link={card.link}
-            />
-          );
-        })}
-      </div>
-    </section>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.1, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <section id="section2">
+        <div id="textW">
+          <Title text="We can help you bring your idea to life" />
+          <Text
+            text="From idea to viable product, we can help you define your goals and create a roadmap to the best user experience solution"
+            width={500}
+            TA="center"
+          />
+        </div>
+        <div id="cardW">
+          {Cards.map((card) => {
+            return (
+              <Card
+                icon={card.icon}
+                title={card.title}
+                text={card.text}
+                link={card.link}
+              />
+            );
+          })}
+        </div>
+      </section>
+    </motion.div>
   );
 }
 

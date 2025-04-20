@@ -1,6 +1,7 @@
 import "../styles/section4.scss";
 import { Title } from "./section1.jsx";
 import { Text } from "./section1.jsx";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMessage,
@@ -10,28 +11,35 @@ import {
 
 export default function Section4() {
   return (
-    <section id="section4">
-      <div id="txtW3">
-        <Title text="CONTACT US, YOU WILL NOT BE DISAPPOINTED" id="title4" />
-        <Text
-          text="Don't hesitate to get in touch with us – we would be happy to discuss your needs and goals in more detail. Contact us today and let's start a conversation!"
-          width={510}
-          TA="center"
-        />
-      </div>
-      <div id="cardW2">
-        {Cards.map((Card) => {
-          return (
-            <Card2
-              icon={Card.icon}
-              title={Card.title}
-              text1={Card.text1}
-              text2={Card.text2}
-            />
-          );
-        })}
-      </div>
-    </section>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.1, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <section id="section4">
+        <div id="txtW3">
+          <Title text="CONTACT US, YOU WILL NOT BE DISAPPOINTED" id="title4" />
+          <Text
+            text="Don't hesitate to get in touch with us – we would be happy to discuss your needs and goals in more detail. Contact us today and let's start a conversation!"
+            width={510}
+            TA="center"
+          />
+        </div>
+        <div id="cardW2">
+          {Cards.map((Card) => {
+            return (
+              <Card2
+                icon={Card.icon}
+                title={Card.title}
+                text1={Card.text1}
+                text2={Card.text2}
+              />
+            );
+          })}
+        </div>
+      </section>
+    </motion.div>
   );
 }
 

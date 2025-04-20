@@ -1,42 +1,64 @@
 import "../styles/section1.scss";
 import plan from "../assets/plan.webp";
 import man from "../assets/man.webp";
+import { motion } from "framer-motion";
 
 export default function Section1() {
   return (
     <section id="sectionW">
       <div id="textW">
-        <Title text="We are a full-service digital agency" />
-        <Text
-          text="No matter if it's a small website or bespoke application we are always
-        ready to offer our services with dedication and perfection."
-          width={500}
-          TA="center"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <Title text="We are a full-service digital agency" />
+          <Text
+            text="No matter if it's a small website or bespoke application we are always
+            ready to offer our services with dedication and perfection."
+            width={500}
+            TA="center"
+          />
+        </motion.div>
       </div>
       <div id="div2W">
         <div id="imgs">
-          <Image url={plan} alt="plan" />
-          <Image url={man} alt="man" offsetx={-40} offsety={70} />
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <Image url={plan} alt="plan" />
+            <Image url={man} alt="man" offsetx={-40} offsety={70} />
+          </motion.div>
         </div>
-        <div id="text2">
-          <TitleMini text="Empowering your digital journey" />
-          <Title
-            text="We think strategy, craft design, develop digital.."
-            width={530}
-            sFS={33}
-            id="title2"
-          />
-          <Text
-            text="We can help you transform an idea into a fully viable product, starting by defining the goals and building a roadmap to the best user-experience solution."
-            width={400}
-            font={16}
-            id="p2"
-          />
-          <a href="https://snippet.ma/about-us">
-            <button id="btn3">About Us</button>
-          </a>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: "easeOut", delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div id="text2">
+            <TitleMini text="Empowering your digital journey" />
+            <Title
+              text="We think strategy, craft design, develop digital.."
+              width={530}
+              sFS={33}
+              id="title2"
+            />
+            <Text
+              text="We can help you transform an idea into a fully viable product, starting by defining the goals and building a roadmap to the best user-experience solution."
+              width={400}
+              font={16}
+              id="p2"
+            />
+            <a href="https://snippet.ma/about-us">
+              <button id="btn3">About Us</button>
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
