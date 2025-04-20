@@ -47,7 +47,7 @@ export function Title(props) {
     <div>
       <h1
         className="title"
-        style={{ width: props.width, fontSize: props.sFS }}
+        style={{ width: props.width, fontSize: props.sFS, color: props.color }}
         id={props.id}
       >
         {props.text}
@@ -59,7 +59,11 @@ export function Title(props) {
 export function Text(props) {
   return (
     <div style={{ width: props.width, textAlign: props.TA }}>
-      <p className="text" style={{ fontSize: props.font }} id={props.id}>
+      <p
+        className="text"
+        style={{ fontSize: props.font, color: props.color }}
+        id={props.id}
+      >
         {props.text}
       </p>
     </div>

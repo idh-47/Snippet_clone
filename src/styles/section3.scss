@@ -5,6 +5,8 @@ $snippetLightBlue: #1292ee;
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 200px;
   flex-wrap: wrap;
 }
 
@@ -26,7 +28,7 @@ $snippetLightBlue: #1292ee;
   }
   #leftPart {
     position: relative;
-    bottom: 270px;
+    bottom: 280px;
   }
   #text3 {
     width: 90vw;
@@ -34,5 +36,9 @@ $snippetLightBlue: #1292ee;
   #title3 {
     font-size: 26px !important;
     width: 350px !important;
+  }
+  #section3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
 }

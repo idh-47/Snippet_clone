@@ -1,9 +1,12 @@
 import "./styles/app.scss";
 import Header from "./components/header";
-import Hero from "./components/hero";
+import Hero from "./components/Hero";
 import Section1 from "./components/section1";
 import Section2 from "./components/section2";
 import Section3 from "./components/section3";
+import City from "./components/citysection";
+import Section4 from "./components/section4";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <City />
+      <Section4 />
+      <Footer />
     </>
   );
 }

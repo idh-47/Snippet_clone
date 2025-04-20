@@ -1,4 +1,5 @@
 import "../styles/hero.scss";
+import Typewriter from "typewriter-effect";
 // import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -22,8 +23,18 @@ function Title() {
   return (
     <h1 id="title">
       We <br />
-      <span>Design</span>
-      <br /> Digital products
+      {/* <Typewriter
+        options={{
+          strings: ["Develop", "Launch", "Design"],
+          autoStart: true,
+          loop: true,
+          delay: 150,
+          deleteSpeed: 85,
+        }}
+      />{" "} */}
+      <span>Desgin</span>
+      <br />
+      Digital products
     </h1>
   );
 }

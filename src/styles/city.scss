@@ -1,0 +1,35 @@
+#city {
+  width: 100vw;
+  height: 40vh;
+  background-image: linear-gradient(rgba(6, 30, 59, 0.7), rgba(5, 9, 44, 0.6)),
+    url("../assets/city.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+@media (max-width: 450px) {
+  #title4 {
+    font-size: 29px !important;
+    width: 350px !important;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #city {
+    margin-top: 0px;
+    position: relative;
+    bottom: 230px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-height: 1300px) {
+  #city {
+    height: 27vh;
+  }
+}
