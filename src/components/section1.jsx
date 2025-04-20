@@ -13,7 +13,7 @@ export default function Section1() {
           transition={{ duration: 1.1, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <Title text="We are a full-service digital agency" />
+          <Title text="We are a full-service digital agency" id="title1" />
           <Text
             text="No matter if it's a small website or bespoke application we are always
             ready to offer our services with dedication and perfection."
