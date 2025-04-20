@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function City() {
   return (
     <div id="city">
-      <motion
+      <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1, ease: "easeOut" }}
@@ -17,8 +17,8 @@ export default function City() {
           id="title4"
           color="white"
         />
-      </motion>
-      <motion
+      </motion.div>
+      <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1, ease: "easeOut" }}
@@ -30,7 +30,7 @@ export default function City() {
           TA="center"
           color="white"
         />
-      </motion>
+      </motion.div>
     </div>
   );
 }
