@@ -23,7 +23,7 @@ function Title() {
   return (
     <h1 id="title">
       We <br />
-      {/* <Typewriter
+      <Typewriter
         options={{
           strings: ["Develop", "Launch", "Design"],
           autoStart: true,
@@ -31,9 +31,7 @@ function Title() {
           delay: 150,
           deleteSpeed: 85,
         }}
-      />{" "} */}
-      <span>Desgin</span>
-      <br />
+      />{" "}
       Digital products
     </h1>
   );
